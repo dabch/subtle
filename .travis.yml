@@ -1,10 +1,10 @@
 language: rust
 cache: cargo
 
-rust:
-  - stable
-  - beta
-  - nightly
+  #rust:
+  #- stable
+  #- beta
+  #- nightly
 
 matrix:
   include:
