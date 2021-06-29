@@ -28,6 +28,10 @@ extern crate rand;
 use core::ops::{BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, Neg, Not};
 use core::option::Option;
 
+extern crate serde;
+
+use serde::{Serialize, Deserialize};
+
 /// The `Choice` struct represents a choice for use in conditional assignment.
 ///
 /// It is a wrapper around a `u8`, which should have the value either `1` (true)
@@ -45,7 +49,7 @@ use core::option::Option;
 ///
 /// [rust-timing-shield]:
 /// https://www.chosenplaintext.ca/open-source/rust-timing-shield/security
-#[derive(Copy, Clone, Debug)]
+#[derive(Copy, Clone, Debug, Serialize, Deserialize)]
 #[repr(C)]
 pub struct Choice(u8);
 
